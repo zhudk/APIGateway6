@@ -1,0 +1,89 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/WeatherForecast/TestGet?id={id}",
+      "DownstreamScheme": "http",
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 5001
+      //  }
+      //],
+      "UpstreamPathTemplate": "/A/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "UseServiceDiscovery": true, //使用服务发现
+      "ServiceName": "A", //Consul服务名称
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection" //"LeastConnection":最少连接数服务器   "NoloadBalance":不负载均衡     "CookieStickySession":会话粘滞
+      },
+      //熔断
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3, //熔断之前允许多少个异常请求
+        "DurationOfBreak": 10000, //熔断的时间,单位为ms.超过这个时间可再请求
+        "TimeoutValue": 4000 //如果下游请求的处理时间超过多少则将请求设置为超时  默认90秒
+      },
+      //限流
+      "RateLimitOptions": {
+        "ClientWhitelist": [], //白名单  ClientId区分大小写
+        "EnableRateLimiting": true,
+        "Period": "1s", //5m 1h 1d
+        "PeriodTimespan": 10, //多少秒之后客户端可以重试
+        "Limit": 5 //统计时间段内允许的最大请求数
+      },
+      //缓存
+      "FileCacheOptions": {
+        "TtlSeconds": 5, //过期时间
+        "Region": "A" //可以调用Api清理
+      }
+      ////授权
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "managekey",
+      //  "AllowedScopes": []
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/WeatherForecast/{url}",
+      "DownstreamScheme": "http",
+      //"DownstreamHostAndPorts": [
+      //  {
+      //    "Host": "localhost",
+      //    "Port": 5002
+      //  }
+      //],
+      "UpstreamPathTemplate": "/B/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "UseServiceDiscovery": true, //使用服务发现
+      "ServiceName": "B", //Consul服务名称
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection" //"RoundRobin":轮询   "NoloadBalance":不负载均衡     "CookieStickySession":会话粘滞
+      },
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3, //熔断之前允许多少个异常请求
+        "DurationOfBreak": 10000, //熔断的时间,单位为ms.超过这个时间可再请求
+        "TimeoutValue": 4000 //如果下游请求的处理时间超过多少则将请求设置为超时  默认90秒
+      },
+      //限流
+      "RateLimitOptions": {
+        "ClientWhitelist": [], //白名单  ClientId区分大小写
+        "EnableRateLimiting": true,
+        "Period": "1s", //5m 1h 1d
+        "PeriodTimespan": 10, //多少秒之后客户端可以重试
+        "Limit": 5 //统计时间段内允许的最大请求数
+      },
+      //缓存
+      "FileCacheOptions": {
+        "TtlSeconds": 5, //过期时间
+        "Region": "B" //可以调用Api清理
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5000",
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul" //由Consul提供服务发现,每次请求去Consul
+    }
+  },
+  "IdentityServerUrl": "http://localhost:5100"
+}

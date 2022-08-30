@@ -1,0 +1,12 @@
+D:\Tests\APIGateway6\ConsulBase6\bin\Debug\net6.0\ConsulBase6.deps.json
+D:\Tests\APIGateway6\ConsulBase6\bin\Debug\net6.0\ConsulBase6.dll
+D:\Tests\APIGateway6\ConsulBase6\bin\Debug\net6.0\ref\ConsulBase6.dll
+D:\Tests\APIGateway6\ConsulBase6\bin\Debug\net6.0\ConsulBase6.pdb
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.csproj.AssemblyReference.cache
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.AssemblyInfoInputs.cache
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.AssemblyInfo.cs
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.csproj.CoreCompileInputs.cache
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.dll
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ref\ConsulBase6.dll
+D:\Tests\APIGateway6\ConsulBase6\obj\Debug\net6.0\ConsulBase6.pdb

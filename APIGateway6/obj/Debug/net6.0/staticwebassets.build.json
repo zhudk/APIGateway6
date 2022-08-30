@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "BPbHGfigwJKEFGVMJHqXSqSK839OoZd9wRu54rDwRis=",
+  "Source": "APIGateway6",
+  "BasePath": "_content/APIGateway6",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

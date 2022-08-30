@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9e28b264-59a0-42b2-b3db-1dade46302b5": {
+      "ProjectGuid": "9e28b264-59a0-42b2-b3db-1dade46302b5",
+      "DisplayName": "ConsulBase6",
+      "ColorIndex": 0
+    },
+    "f52ec0df-42db-4588-9425-06fc53e6b579": {
+      "ProjectGuid": "f52ec0df-42db-4588-9425-06fc53e6b579",
+      "DisplayName": "WebAPI.A6",
+      "ColorIndex": 1
+    },
+    "ed11b0da-928a-457f-98ca-66beff10ff4f": {
+      "ProjectGuid": "ed11b0da-928a-457f-98ca-66beff10ff4f",
+      "DisplayName": "APIGateway6",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "杂项文件",
+      "ColorIndex": -1
+    },
+    "be1377fa-6e93-4b25-b35f-71443d2f82e5": {
+      "ProjectGuid": "be1377fa-6e93-4b25-b35f-71443d2f82e5",
+      "DisplayName": "WebAPI.B6",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
